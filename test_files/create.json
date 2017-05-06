@@ -1,0 +1,10 @@
+{
+  "body": "{\"content\":\"My amazing site\",\"attachment\":\"amazing.jpg\"}",
+  "requestContext": {
+    "authorizer": {
+      "claims": {
+        "sub": "USER-SUB-1234"
+      }
+    }
+  }
+}
