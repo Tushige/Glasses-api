@@ -6,7 +6,7 @@ import {sendResponse} from './libs/response';
 
 export async function get(event, context, callback) {
     const params = {
-        TableName: 'readings',
+        TableName: 'readingList',
         Key: {
             userId: event.requestContext.authorizer.claims.sub,
             readingId: event.pathParameters.id,

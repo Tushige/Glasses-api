@@ -7,14 +7,20 @@ import {sendResponse} from './libs/response';
 export async function update(event, context, callback) {
     const data = JSON.parse(event.body);
     const params = {
-        TableName: "readings",
+        TableName: "readingList",
         Key: {
             "userId": event.requestContext.authorizer.claims.sub,
             "readingId": event.pathParameters.id
         },
-        UpdateExpression: "set content = :content, attachment = :attachment, createdAt = :date",
+        UpdateExpression: "set title = :title," +
+                               "link = :link," +
+                               "memo = :memo," +
+                               "attachment = :attachment," +
+                               "createdAt = :date",
         ExpressionAttributeValues: {
-            ":content": data.content ? data.content:null,
+            ":title": data.title ? data.title : null,
+            ":link": data.link ? data.link : null,
+            ":memo": data.memo ? data.memo : null,
             ":attachment": data.attachment ? data.attachment:null,
             ":date": new Date().getTime()
         },

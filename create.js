@@ -7,14 +7,14 @@ import {sendResponse} from './libs/response';
 
 export async function create(event, context, callback) {
     const data = JSON.parse(event.body);
-
     const params = {
-        TableName: 'readings',
+        TableName: 'readingList',
         Item: {
             userId: event.requestContext.authorizer.claims.sub,
             readingId: uuid.v1(),
-            content: data.content,
-            attachment: data.attachment,
+            title: data.title,
+            link: data.link,
+            memo: data.memo,
             createdAt: new Date().getTime(),
         },
     };

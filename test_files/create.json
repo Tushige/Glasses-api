@@ -1,10 +1,10 @@
 {
-  "body": "{\"content\":\"My amazing site\",\"attachment\":\"amazing.jpg\"}",
-  "requestContext": {
-    "authorizer": {
-      "claims": {
-        "sub": "USER-SUB-1234"
-      }
-    }
-  }
+	"body": "{\"title\":\"How to bake a cookie\",\"link\":\"https://www.cookie.com\"}",
+	"requestContext": {
+		"authorizer": {
+			"claims": {
+				"sub": "testUser1234"
+			}
+		}
+	}
 }

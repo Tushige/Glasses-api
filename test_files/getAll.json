@@ -2,7 +2,7 @@
   "requestContext": {
     "authorizer": {
       "claims": {
-        "sub": "USER-SUB-1234"
+        "sub": "testUser1234"
       }
     }
   }

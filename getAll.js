@@ -6,7 +6,7 @@ import {sendResponse} from './libs/response';
 
 export async function getAll(event, context, callback) {
     const params = {
-        TableName: "readings",
+        TableName: "readingList",
         KeyConditionExpression: "userId = :userId",
         ExpressionAttributeValues: {
             ":userId": event.requestContext.authorizer.claims.sub,
