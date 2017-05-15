@@ -15,6 +15,7 @@ export async function create(event, context, callback) {
             title: data.title,
             link: data.link,
             memo: data.memo,
+            attachment: data.attachment,
             createdAt: new Date().getTime(),
         },
     };
